@@ -1,5 +1,9 @@
 <?php
-/** Presta SEO — MIT license. No credentials or external services. */
+/**
+ * Presta SEO
+ * Miguel Angel García - eXtremaNET Consultores (2026)
+ * Licencia MIT
+ */
 if (!defined('_PS_VERSION_')) {
     exit;
 }
@@ -16,10 +20,9 @@ class Prestaseo extends Module
         $this->name = 'prestaseo';
         $this->tab = 'seo';
         $this->version = '0.2.0';
-        $this->author = 'Presta SEO contributors';
+        $this->author = 'eXtremaNET Consultores';
         $this->need_instance = 0;
         $this->bootstrap = true;
-        // Target range, not a claim of integration certification for every release.
         $this->ps_versions_compliancy = array('min' => '1.7.0.0', 'max' => '9.99.99');
         parent::__construct();
         $this->displayName = $this->l('Presta SEO: identidad y metadatos');
@@ -40,7 +43,6 @@ class Prestaseo extends Module
 
     public function uninstall()
     {
-        // Deliberately retain backup data and settings for recovery on reinstall.
         return parent::uninstall();
     }
 

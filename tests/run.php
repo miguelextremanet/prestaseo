@@ -1,5 +1,5 @@
 <?php
-/** Local behavioural tests. No real PrestaShop/database is used. */
+/** Pruebas locales de Presta SEO */
 if (PHP_SAPI !== 'cli') { http_response_code(403); exit; }
 define('_PS_VERSION_', '1.7.0.0');
 define('_DB_PREFIX_', 'ps_');
@@ -93,7 +93,6 @@ function fixture() {
     $db->rows = array('product:1:1:1' => array('meta_title' => '', 'meta_description' => ''),
         'product:1:2:1' => array('meta_title' => 'Other language'),
         'product:1:1:2' => array('meta_title' => 'Other shop'));
-    // Reserve zero so backup IDs behave as an auto-increment starting at 1.
     $db->backups = array(0 => array('id_shop' => 0));
     Db::$instance = $db;
     return $db;

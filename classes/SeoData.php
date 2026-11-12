@@ -1,5 +1,9 @@
 <?php
-/** Pure data helpers, compatible with PHP 5.6+. MIT license. */
+/**
+ * Presta SEO
+ * Miguel Angel García - eXtremaNET Consultores (2026)
+ * Licencia MIT
+ */
 class PrestaSeoData
 {
     public static function clean($text)

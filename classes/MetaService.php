@@ -1,9 +1,13 @@
 <?php
+/**
+ * Presta SEO
+ * Miguel Angel García - eXtremaNET Consultores (2026)
+ * Licencia MIT
+ */
 if (!defined('_PS_VERSION_')) {
     exit;
 }
 
-/** Shop-scoped, locked and transactional metadata updates. */
 class PrestaSeoMetaService
 {
     private $db;
@@ -115,7 +119,6 @@ class PrestaSeoMetaService
             $this->db->execute('ROLLBACK');
             throw $error;
         }
-        // A page-cache module/CDN may need its own explicit purge.
         if (class_exists('Cache')) {
             Cache::clean('Product::*');
             Cache::clean('Category::*');
