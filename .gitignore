@@ -1,0 +1,13 @@
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+vendor/
+*.zip
+.env
+config.local.*
+
+# Copias y versiones antiguas que no forman parte del modulo
+/prestaseo/
+/presta-seo/
+/publicar.bat
